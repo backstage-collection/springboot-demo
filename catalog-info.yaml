@@ -1,0 +1,14 @@
+
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: springboot-demo
+  annotations:
+    backstage.io/kubernetes-id: springboot-demo
+    backstage.io/techdocs-ref: dir:.
+    github.com/project-slug: backstage-collection/springboot-demo
+spec:
+  type: api
+  system: system:default/examples
+  lifecycle: production
+  owner: group:default/guests
