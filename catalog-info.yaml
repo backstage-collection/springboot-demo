@@ -1,14 +1,25 @@
 
 apiVersion: backstage.io/v1alpha1
-kind: Component
+kind: API
 metadata:
   name: springboot-demo
+  description: Spring Boot Demo
   annotations:
     backstage.io/kubernetes-id: springboot-demo
     backstage.io/techdocs-ref: dir:.
     github.com/project-slug: backstage-collection/springboot-demo
+  tags:
+    - java
+  links:
+    - url: https://admin.example-org.com
+      title: Admin Dashboard
+      icon: dashboard
+      type: admin-dashboard
 spec:
-  type: api
+  type: openapi
   system: system:default/examples
   lifecycle: production
   owner: group:default/developers
+  definition:
+    $text: ./openapi.json
+
